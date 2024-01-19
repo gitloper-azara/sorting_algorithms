@@ -3,7 +3,7 @@
 /**
  * bubble_sort - a function that sorts an array of integers in
  * ascending order using the Bubble sort algorithm
- * @array: list size of unsorted data
+ * @array: list of unsorted data
  * @size: size of the list of unsorted data
  * 
  * Return: void
