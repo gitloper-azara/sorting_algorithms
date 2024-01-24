@@ -7,7 +7,6 @@
  * @size: size of the list
  * Return: void
 */
-
 void shell_sort(int *array, size_t size)
 {
 	size_t i, j, gap;
@@ -17,9 +16,11 @@ void shell_sort(int *array, size_t size)
 		return;
 
 	/* calculate the initial gap using Knuth sequence */
-        while (gap < size / 3)
-            gap = gap * 3 + 1;
+	gap = 1;
+	while (gap < size)
+		gap = gap * 3 + 1;
 
+	gap = (gap - 1) / 3;
 	while (gap > 0)
 	{
 		/* perform a gapped insertion sort for every elements in gaps */
@@ -45,8 +46,7 @@ void shell_sort(int *array, size_t size)
 		}
 		/* print the array after decreasing gap */
 		print_array(array, size);
-
 		 /* reduce the gap using Knuth Sequence */
-		gap /= 3;
+		gap = (gap - 1) / 3;
 	}
 }
